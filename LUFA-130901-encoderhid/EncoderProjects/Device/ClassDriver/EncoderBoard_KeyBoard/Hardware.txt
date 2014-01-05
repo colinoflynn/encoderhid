@@ -1,0 +1,45 @@
+Supports up to 12x Mechanical Quadrature Encoders + 12x push buttons.
+
+Connect the 'common' of the encoder & push-button to GND. Connect the other side to the following ports, which will have internal pull-ups enabled:
+
+Encoder Connections:
+Encoder  1: A = PINA.0, B = PINA.1
+Encoder  2: A = PINA.2, B = PINA.3
+Encoder  3: A = PINA.4, B = PINA.5
+Encoder  4: A = PINA.6, B = PINA.7
+Encoder  5: A = PINB.0, B = PINB.1
+Encoder  6: A = PINB.2, B = PINB.3
+Encoder  7: A = PINB.4, B = PINB.5
+Encoder  8: A = PINB.6, B = PINB.7
+Encoder  9: A = PINC.0, B = PINC.1
+Encoder 10: A = PINC.2, B = PINC.3
+Encoder 11: A = PINC.4, B = PINC.5
+Encoder 12: A = PINC.6, B = PINC.7
+
+Push Button connections:
+Button  1: PINE.0 
+Button  2: PINE.1
+Button  3: PINE.2 
+Button  4: PINE.3 
+Button  5: PINE.4 
+Button  6: PINE.5 
+Button  7: PINE.6 
+Button  8: PINE.7 
+Button  9: PIND.0 
+Button 10: PIND.1
+Button 11: PIND.2 
+Button 12: PIND.3
+
+Note that PINE.2 is also the Hardware Boot Button. You should make the 'RESET' button accessible to easily re-enter the bootloader mode. To re-enter bootloader mode then do the following:
+ 1. Push button connected to PINE2 & hold it (Button 3)
+ 2. Push & release reset button
+ 3. Release button connected to PINE2, unit can now be programmed with FLIP
+ 
+Alternatively, the firmware will jump to bootloader if you hold down buttons 1 & 4 (if normally open, 2 & 3 if normally closed). But if something gets corrupted that won't work, so you might still want the reset button.
+
+Unconnected inputs will be ignored, since they will always read as high due to internal pull-ups. So e.g. you can have just 4 encoders & 12 buttons or so forth.
+
+Pushbuttons should be normally open.
+
+Changes in encoders or buttons get mapped to unique key presses. I don't know what they are explcitily, just try them & see.
+
