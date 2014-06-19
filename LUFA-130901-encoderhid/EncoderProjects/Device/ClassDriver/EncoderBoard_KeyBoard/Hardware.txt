@@ -30,6 +30,9 @@ Button 10: PIND.1
 Button 11: PIND.2 
 Button 12: PIND.3
 
+The Teensy++ 2.0 doesn't have PINE.2 or PINE.3. The actual name/number of the buttons is irrelvant, so you
+can just connect the buttons to the next in line (5).
+
 Note that PINE.2 is also the Hardware Boot Button. You should make the 'RESET' button accessible to easily re-enter the bootloader mode. To re-enter bootloader mode then do the following:
  1. Push button connected to PINE2 & hold it (Button 3)
  2. Push & release reset button

@@ -12,10 +12,10 @@
 # Run "make help" for target help.
 
 #If changing MCU type, change BOOTLOADER_START_ADDRESS to default boot address for device
-MCU          = at90usb1287
+MCU          = at90usb1286
 ARCH         = AVR8
 BOARD        = USBKEY
-F_CPU        = 8000000
+F_CPU        = 16000000
 F_USB        = $(F_CPU)
 OPTIMIZATION = s
 TARGET       = EncoderBoard
